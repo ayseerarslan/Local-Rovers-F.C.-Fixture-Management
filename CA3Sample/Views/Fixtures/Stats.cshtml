@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Season Stats";
+}
+
+<h2>Season Statistics</h2>
+
+<table class="table table-striped">
+    <tr><th>Matches Played</th><td>@ViewBag.Played</td></tr>
+    <tr><th>Wins</th><td>@ViewBag.Won</td></tr>
+    <tr><th>Draws</th><td>@ViewBag.Drawn</td></tr>
+    <tr><th>Losses</th><td>@ViewBag.Lost</td></tr>
+    <tr><th>Goal Difference</th><td>@ViewBag.GoalDifference</td></tr>
+    <tr><th>Total Points</th><td>@ViewBag.Points</td></tr>
+</table>
+
+<a asp-action="Index" class="btn btn-primary">Back to Fixtures</a>

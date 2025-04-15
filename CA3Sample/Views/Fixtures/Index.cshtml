@@ -1,0 +1,34 @@
+﻿@model List<Fixture>
+
+    <h2>All Fixtures</h2>
+
+    <a asp-action="Create" class="btn btn-primary">Add New Fixture</a>
+    <a asp-action="Stats" class="btn btn-secondary ml-2">View Stats</a>
+
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th>Date & Time</th>
+                <th>Venue</th>
+                <th>Opponent Team</th>
+                <th>Goals For</th>
+                <th>Goals Against</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+{
+            <tr>
+                <td>@item.DateTime.ToString("g")</td>
+                <td>@item.Venue</td>
+                <td>@item.OpponentTeam</td>
+                <td>@item.GoalsFor</td>
+                <td>@item.GoalsAgainst</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.MatchId" class="btn btn-sm btn-warning">Edit</a>
+                </td>
+            </tr>
+}
+        </tbody>
+    </table>

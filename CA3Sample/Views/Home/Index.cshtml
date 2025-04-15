@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <h1>Welcome to Local Rovers F.C. Fixture Management</h1>
+    <p>Manage your football fixtures easily:</p>
+
+    <!-- Button to create new fixture -->
+    <a href="@Url.Action("Create", "Fixtures")" class="btn btn-primary">Create New Fixture</a>
+
+    <!-- Button to view all fixtures -->
+    <a href="@Url.Action("Index", "Fixtures")" class="btn btn-secondary">View All Fixtures</a>
+
+    <!-- Button to view stats -->
+    <a href="@Url.Action("Stats", "Fixtures")" class="btn btn-info">View Stats</a>
+</div>
